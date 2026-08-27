@@ -48,7 +48,7 @@ body {
                 Cookies section 
 ============================================== */
 .cookies {
-  /* display: none; */
+  display: none;
 }
 .cookies .container {
   display: flex;
@@ -128,7 +128,6 @@ body {
 /*  ==========================================
                 Hero section 
 ============================================== */
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -200,6 +199,59 @@ button {
 }
 
 /*  ==========================================
+                CTA section 
+============================================== */
+.call-to-action {
+  display: flex;
+  /* display: none; */
+  justify-content: center;
+}
+
+.call-to-action .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 56px 80px;
+  background-image: url("../assets/images/cta-bg-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1272px;
+  height: 196px;
+  position: relative;
+  top: -96px;
+  border-radius: 16px;
+}
+
+.left-cta {
+  display: flex;
+}
+
+.right-cta {
+  display: flex;
+  order: 1;
+}
+
+.left-cta h3 {
+  font-size: 48px;
+  line-height: 50px;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+}
+
+.right-cta button {
+  width: 266px;
+  height: 82px;
+  font-size: 22px;
+  line-height: 36px;
+  font-weight: 800;
+  border: 1px solid #323232;
+  background-color: #323232;
+  color: white;
+  text-transform: uppercase;
+}
+/*  ==========================================
                 Speakers section 
 ============================================== */
 .speakers {
@@ -214,7 +266,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 328px;
+  height: 130px;
   width: 100%;
   background-color: white;
 }
