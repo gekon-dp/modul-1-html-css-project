@@ -47,6 +47,83 @@ body {
 /*  ==========================================
                 Cookies section 
 ============================================== */
+.cookies {
+  /* display: none; */
+}
+.cookies .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 104px;
+  width: 1920px;
+  position: fixed;
+  bottom: 20px;
+  z-index: 10;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+.left-cookie {
+  display: flex;
+  flex-direction: column;
+  width: 1024px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+}
+
+.left-cookie h2 {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  padding-bottom: 17px;
+}
+
+.left-cookie p {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #3c3c3c;
+}
+
+.left-cookie a {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+  text-decoration: underline;
+  border: 1px solid #3c3c3c;
+}
+
+.right-cookie {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 244px;
+  padding-top: 30px;
+  padding-bottom: 32px;
+  gap: 16px;
+}
+
+.right-cookie button {
+  width: 125px;
+  height: 42px;
+  background-color: #324fbe;
+  color: white;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+  border: 1px;
+  border-radius: 2px;
+  text-transform: none;
+}
+
+#transparent-btn {
+  background-color: transparent;
+  color: #324fbe;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+}
 
 /*  ==========================================
                 Hero section 
