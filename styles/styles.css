@@ -34,6 +34,7 @@ body {
 
 .container {
   width: 100%;
+  max-width: 1296px;
 }
 
 @media (max-width: 1920px) {
@@ -65,7 +66,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   background-color: #323232;
-  /* max-width: 1920px; */
+  max-width: 100% !important;
   gap: min(40px, 3vw);
 }
 
@@ -118,7 +119,6 @@ body {
                 Cookies section 
 ============================================== */
 .cookies {
-  /* display: none; */
   background-color: white;
   position: fixed;
   left: 0;
@@ -133,7 +133,7 @@ body {
   align-items: center;
   background-color: white;
   min-height: 104px;
-  max-width: 1920px;
+  max-width: 1296px;
 }
 
 .left-cookie {
@@ -263,14 +263,16 @@ body {
   }
 
   .right-cookie {
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
   }
 
   .right-cookie button {
-    flex: 1;
-    width: auto;
+    flex: none;
+    width: 100%;
     max-width: none;
-    height: 44px;
+    height: 42px;
   }
 }
 
@@ -345,6 +347,214 @@ button {
   font-weight: 700;
   line-height: 32px;
   letter-spacing: 1px;
+}
+
+@media (max-width: 1600px) {
+  .hero {
+    min-height: 950px;
+  }
+  .hero .container {
+    padding-left: 32px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .hero {
+    min-height: 900px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    min-height: 800px;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+    line-height: 60px;
+  }
+
+  .hero p {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+
+  .right-column {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .hero img {
+    height: auto;
+    max-width: 300px;
+    margin-bottom: 24px;
+    object-fit: contain;
+  }
+
+  .hero button {
+    width: 200px;
+    height: 64px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 700px;
+  }
+  .hero .container {
+    padding-left: 16px;
+  }
+  .right-column {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 600px;
+    padding-top: 60px;
+  }
+  .hero h1 {
+    font-size: 44px;
+    line-height: 48px;
+  }
+
+  .hero p {
+    font-size: 19px;
+    line-height: 28px;
+  }
+
+  .right-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero img {
+    max-width: 200px;
+  }
+
+  .hero button {
+    width: 200px;
+    height: 64px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: auto;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+    line-height: 42px;
+    text-align: left;
+    padding-top: 24px;
+    padding-bottom: 0;
+    order: 2;
+  }
+
+  .hero-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    order: 1;
+  }
+
+  .right-column {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    order: 1;
+  }
+
+  .hero img {
+    max-width: 180px;
+    margin-bottom: 0;
+  }
+
+  .left-colunm {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    order: 2;
+  }
+
+  /* Магия display: contents для сквозного позиционирования h1 и картинок */
+  .hero-row {
+    display: contents;
+  }
+
+  .right-column {
+    order: 1;
+  }
+  .hero h1 {
+    order: 2;
+  }
+  .left-colunm {
+    order: 3;
+  }
+
+  .left-colunm p:last-of-type {
+    padding-bottom: 0;
+  }
+
+  .hero p {
+    font-size: 19px;
+    line-height: 28px;
+    text-align: left;
+  }
+
+  .hero button {
+    width: 100%;
+    max-width: 216px;
+    height: 64px;
+    font-size: 18px;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 391px) {
+  .hero h1 {
+    font-size: 34px;
+    line-height: 38px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  .hero p {
+    font-size: 19px;
+    line-height: 28px;
+    text-align: left;
+  }
+
+  .hero button {
+    width: 100%;
+    max-width: 216px;
+    height: 64px;
+    font-size: 16px;
+    margin-top: 8px;
+  }
 }
 
 /*  ==========================================
