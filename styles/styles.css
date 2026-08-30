@@ -36,15 +36,21 @@ body {
   width: 100%;
 }
 
-@media (max-width: 1201px) {
+@media (max-width: 1920px) {
 }
-@media (max-width: 1025px) {
+@media (max-width: 1600px) {
 }
-@media (max-width: 769px) {
+@media (max-width: 1440px) {
 }
-@media (max-width: 481px) {
+@media (max-width: 1200px) {
 }
-@media (max-width: 391px) {
+@media (max-width: 1024px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 480px) {
+}
+@media (max-width: 390px) {
 }
 
 /*  ==========================================
@@ -87,7 +93,7 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 768px) {
   .top-bar .container {
     gap: 0px;
   }
@@ -102,7 +108,7 @@ body {
   }
 }
 
-@media (max-width: 481px) {
+@media (max-width: 480px) {
   .top-bar {
     display: none;
   }
@@ -183,6 +189,8 @@ body {
   border: 1px;
   border-radius: 2px;
   text-transform: none;
+  flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 #transparent-btn {
@@ -192,6 +200,78 @@ body {
   line-height: 16px;
   font-weight: 600;
   text-decoration: underline;
+}
+
+@media (max-width: 1600px) {
+  .right-cookie {
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .left-cookie {
+    width: 60%;
+    padding: 10px 16px;
+  }
+  .right-cookie {
+    width: 40%;
+    padding: 10px 16px;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .right-cookie button {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    max-width: 125px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cookies .container {
+    flex-direction: column;
+  }
+
+  .left-cookie {
+    width: 100%;
+    padding: 16px 16px 8px 16px;
+  }
+
+  .right-cookie {
+    width: 100%;
+    justify-content: flex-end;
+    padding: 8px 16px 16px 16px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookies {
+    bottom: 0;
+  }
+  .cookies .container {
+    align-items: stretch;
+  }
+
+  .left-cookie h2 {
+    padding-bottom: 8px;
+  }
+
+  .right-cookie {
+    justify-content: space-between;
+  }
+
+  .right-cookie button {
+    flex: 1;
+    width: auto;
+    max-width: none;
+    height: 44px;
+  }
 }
 
 /*  ==========================================
@@ -353,13 +433,6 @@ button {
   min-height: 1886px;
   padding-bottom: 180px;
 }
-
-/* .speakers-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
 
 .speaker-1 {
   grid-area: 1 / 1 / 2 / 2;
@@ -745,4 +818,12 @@ button {
 .bottom-right p:last-of-type {
   padding-top: 5px;
   padding-bottom: 24px;
+}
+
+/* ВРЕМЕННО: скрываем неадаптированные нижние секции, чтобы они не растягивали экран */
+.call-to-action,
+.speakers,
+.tickets,
+.feature {
+  display: none !important;
 }
