@@ -36,21 +36,15 @@ body {
   width: 100%;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 1201px) {
 }
-@media (max-width: 1600px) {
+@media (max-width: 1025px) {
 }
-@media (max-width: 1440px) {
+@media (max-width: 769px) {
 }
-@media (max-width: 1200px) {
+@media (max-width: 481px) {
 }
-@media (max-width: 1024px) {
-}
-@media (max-width: 768px) {
-}
-@media (max-width: 480px) {
-}
-@media (max-width: 390px) {
+@media (max-width: 391px) {
 }
 
 /*  ==========================================
@@ -91,6 +85,27 @@ body {
   cursor: pointer;
   flex-shrink: 0;
   cursor: pointer;
+}
+
+@media (max-width: 769px) {
+  .top-bar .container {
+    gap: 0px;
+  }
+  .top-bar span {
+    flex: 1;
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .top-bar button {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 481px) {
+  .top-bar {
+    display: none;
+  }
 }
 
 /*  ==========================================
