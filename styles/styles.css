@@ -202,6 +202,10 @@ body {
   text-decoration: underline;
 }
 
+.cookies.is-hidden {
+  display: none !important;
+}
+
 @media (max-width: 1600px) {
   .right-cookie {
     justify-content: center;
@@ -1637,9 +1641,4 @@ button {
     line-height: 30px;
     padding-bottom: 26px;
   }
-}
-
-/* ВРЕМЕННО: скрываем неадаптированные нижние секции, чтобы они не растягивали экран */
-.cookies {
-  display: none !important;
 }
