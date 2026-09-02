@@ -976,7 +976,7 @@ button {
   background-color: #fbdb3c;
 }
 
-.tickets > .container {
+.tickets .container {
   display: flex;
   flex-direction: column;
   max-width: 1296px;
@@ -989,6 +989,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .tickets-bottom-row {
@@ -1008,10 +1009,17 @@ button {
   text-transform: uppercase;
 }
 
+.logo-left-column img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
 .logo-right-column img {
   height: auto;
   max-width: 348px;
   width: 100%;
+  display: block;
 }
 
 .one-ticket-box {
@@ -1029,7 +1037,6 @@ button {
   background-color: white;
 }
 
-/* Блоки с волнистыми краями */
 .stamp-left,
 .stamp-right {
   width: 15px;
@@ -1061,13 +1068,10 @@ button {
   /* круг центрирован по правому краю (100% по горизонтали, 50% по вертикали внутри своего шага) */
   -webkit-mask-image: radial-gradient(circle at 100% 50%, transparent 8px, black 9px);
   mask-image: radial-gradient(circle at 100% 50%, transparent 8px, black 9px);
-
   -webkit-mask-size: 100% 26px;
   mask-size: 100% 26px;
-
   -webkit-mask-repeat: repeat-y;
   mask-repeat: repeat-y;
-
   mask-position: 0 -8px;
   background-color: #cccccc;
 }
@@ -1087,11 +1091,8 @@ button {
   padding: 35px 0;
 }
 
-/* Vertical line */
 .vertical-line {
-  /* Цвет линии */
   --line-color: #eaeaea;
-
   position: relative;
   align-self: center;
   width: 1px;
@@ -1101,31 +1102,22 @@ button {
   z-index: 5;
 }
 
-/* Общие стили для кружков на краях */
 .vertical-line::before,
 .vertical-line::after {
   content: "";
   position: absolute;
   left: 50%;
-  /* Центрируем кружки по горизонтали относительно толщины линии (1px) */
   width: 9px;
-  /* Диаметр круга */
   height: 9px;
-  /* Диаметр круга */
   background-color: var(--line-color);
-  /* Применяем тот же цвет */
   border-radius: 50%;
-  /* Делаем круглым */
   transform: translateX(-50%);
-  /* Точное выравнивание по центру */
 }
 
-/* Кружок сверху */
 .vertical-line::before {
   top: -5px;
 }
 
-/* Кружок снизу */
 .vertical-line::after {
   bottom: -5px;
 }
@@ -1134,7 +1126,8 @@ button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 672px;
+  flex-grow: 1;
+  min-width: 0;
 }
 
 .info p {
@@ -1150,6 +1143,7 @@ button {
   line-height: 27px;
   font-weight: 500;
 }
+
 .discont-size {
   color: #cccccc;
   font-size: 25px;
@@ -1157,6 +1151,7 @@ button {
   font-weight: 700;
   padding-bottom: 24px;
 }
+
 .booking-date {
   color: #8f73f0;
   opacity: 0.6;
@@ -1183,6 +1178,216 @@ button {
   color: white;
 }
 
+@media (max-width: 1600px) {
+  .tickets .container {
+    padding: 100px 20px;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .info p {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .logo-left-column h3 {
+    font-size: 40px;
+    text-align: left;
+  }
+
+  .price p {
+    font-size: 46px;
+  }
+
+  .booking-type,
+  .discont-size {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .ticket-cta p {
+    font-size: 36px;
+  }
+
+  .price {
+    width: 200px;
+  }
+
+  .ticket-cta {
+    width: 220px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tickets-top-row {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .logo-left-column {
+    padding: 10px 0;
+  }
+
+  .price {
+    width: 150px;
+  }
+  .ticket-cta {
+    width: 180px;
+  }
+  .ticket-cta p {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .one-ticket-box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .info-white-box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .price,
+  .info,
+  .ticket-cta {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .price p {
+    padding: 20px 0;
+  }
+
+  .info p {
+    padding: 20px;
+    align-items: center;
+  }
+
+  .ticket-cta {
+    padding: 30px 0;
+  }
+
+  .ticket-cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 25px 0;
+  }
+
+  .ticket-cta p {
+    margin: 0;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .vertical-line {
+    width: 80%;
+    height: 1px;
+    align-self: center;
+  }
+
+  .vertical-line::before {
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .vertical-line::after {
+    right: -5px;
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    left: auto;
+  }
+
+  .stamp-left,
+  .stamp-right {
+    width: 100%;
+    height: 15px;
+  }
+  .stamp-left {
+    width: 100%;
+    height: 15px;
+
+    -webkit-mask-image: radial-gradient(circle at 50% 0%, transparent 8px, black 9px);
+    mask-image: radial-gradient(circle at 50% 0%, transparent 8px, black 9px);
+
+    -webkit-mask-size: 26px 100%;
+    mask-size: 26px 100%;
+
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+
+    mask-position: -8px 0;
+    -webkit-mask-position: -8px 0;
+
+    background-color: white;
+
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .stamp-right {
+    width: 100%;
+    height: 15px;
+    -webkit-mask-image: radial-gradient(circle at 50% 100%, transparent 8px, black 9px);
+    mask-image: radial-gradient(circle at 50% 100%, transparent 8px, black 9px);
+    -webkit-mask-size: 26px 100%;
+    mask-size: 26px 100%;
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+    mask-position: -8px 0;
+    -webkit-mask-position: -8px 0;
+    background-color: #cccccc;
+    margin-top: -1px;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-left-column h3 {
+    font-size: 32px;
+    line-height: 33px;
+  }
+
+  .price p {
+    font-size: 40px;
+    line-height: 65px;
+  }
+
+  .booking-type {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .discont-size {
+    font-size: 22px;
+    line-height: 34px;
+  }
+
+  .booking-date {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .ticket-cta p {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
 /*  ==========================================
                 Feature section
 ============================================== */
@@ -1283,7 +1488,7 @@ button {
 
 /* ВРЕМЕННО: скрываем неадаптированные нижние секции, чтобы они не растягивали экран */
 .cookies,
-.tickets,
+/* .tickets, */
 .feature {
   display: none !important;
 }
