@@ -952,6 +952,11 @@ button {
 }
 
 @media (max-width: 480px) {
+  .speakers .first-row-container {
+    grid-template-columns: 1fr;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   .speakers .second-row-container {
     grid-template-columns: 1fr;
     grid-row-gap: 30px;
@@ -973,6 +978,12 @@ button {
   }
 }
 
+@media (max-width: 391px) {
+  .speakers .first-row-container {
+    /* grid-template-columns: 1fr; */
+    place-items: center;
+  }
+}
 /*  ==========================================
                 Tickets section
 ============================================== */
